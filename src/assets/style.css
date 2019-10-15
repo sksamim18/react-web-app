@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+body {
+	font-family: 'Josefin Sans', sans-serif !important;
+	background-color: #e9ecefa3 !important;
+}
+
+.btnMargin {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.homeCover { 
+	height: 100px; 
+	width: 200px; 
+	overflow: hidden; 
+}
+
+.themeColor {
+	background-color: #17a2b8 !important;
+}
+
+.themeFontColor, .active {
+	color: #17a2b8 !important;
+
+}
+
+.tab-color{
+	color: grey
+}
+
+.center-div {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.searchResultBox {
+    border: none !important;
+    margin-bottom: 10px !important;
+}
+
+.buttonStyle {
+	color: white !important;
+}
+
+.input-group-text {
+	font-size: 13px !important;
+}
+
+.prescriptionStyle {
+    margin-top: 50px;
+    padding: 30px !important;
+    background-color: #fff;
+    border-radius: 5px;
+} 
+
+.noBorderButton {
+	border: 0px !important;
+}
+
+.prescriptionBox {
+	padding: 50px;
+    background-color: #fff !important;
+	border-radius: 10px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .wide-screen {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+	.small-screen {
+		display: none;
+	}
+}

@@ -1,0 +1,98 @@
+import React from 'react'
+
+import DiagnosisList from './diagnosisList.js'
+import TreatmentList from './treatmentList.js'
+
+
+class WritePrescriptionBody extends React.Component {
+
+    constructor(props) {
+    	super(props)
+
+    	this.handleSymptomsChange = this.handleSymptomsChange.bind(this)
+    	this.handleAddDiagnosis = this.handleAddDiagnosis.bind(this)
+        this.handletreatmentWrite = this.handletreatmentWrite.bind(this)
+        this. handleAddTreatment = this.handleAddTreatment.bind(this)
+
+    	this.state = {
+    		diagnosisDetails: "",
+    		diagnosisDetailsList: [],
+            treatment: "",
+            treatmentList: []
+
+    	}
+    }
+    handleSymptomsChange(e) {
+	    this.setState({
+	    	diagnosisDetails: e.target.value
+	    });
+        console.log(this.state.diagnosisDetails)
+    }
+    handleAddDiagnosis(e) {
+    	if (this.state.diagnosisDetails.length != 0) {
+    		this.state.diagnosisDetailsList.push(this.state.diagnosisDetails)
+    	}
+        window.location.href="#todo1"
+        e.preventDefault();
+    }
+    handletreatmentWrite(e) {
+        this.setState({
+            treatment: e.target.value
+        })
+    }
+    handleAddTreatment(e) {
+        if (this.state.treatment.length != 0) {
+            this.state.treatmentList.push(this.state.treatment)
+        }
+        window.location.href="#todo2"
+        e.preventDefault();
+    }
+
+    render() {
+        const inputStyle = {
+            resize: "none"
+        }
+
+    	return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                    	<div className="shadow prescriptionBox" >
+                    	    <h4 className="text-center">Write prescription</h4>
+                            <p className="text-center">Write the causes of the disease & remedy aka treatment.</p>
+                    	    <div className="row text-center">
+                    	        <div className="col-md-6">
+                                    <div id="todo1">
+                                        <DiagnosisList diagnosislist={this.state.diagnosisDetailsList} />                               
+                                    </div>
+                                    <br></br><br></br>
+                                    <textarea value={this.state.diagnosisDetails} onChange={this.handleSymptomsChange} class="form-control" rows="2" id="comment" style={inputStyle}></textarea>
+                                    <a href="#" class="btn btn-info btn-sm" onClick={this.handleAddDiagnosis}>
+                                    + Add Diagnosis
+                                    </a>
+								</div>
+                    	        <div className="col-md-6"> 
+                                    <div id="todo2">
+                                        <TreatmentList treatmentList={this.state.treatmentList} />                               
+                                    </div> 
+                                    <br></br><br></br> 
+                                    <textarea value={this.state.treatment} onChange={this.handletreatmentWrite} class="form-control" rows="2" id="comment" style={inputStyle}></textarea>
+                                    <a href="#" class="btn btn-info btn-sm" onClick={this.handleAddTreatment}>
+                                    + Add Treatment
+                                    </a>                 	        
+								</div>
+                    	    </div>
+                            <br></br>
+                            <div className="text-center">
+                                <a href="#" class="btn btn-info">
+                                    Create prescription
+                                </a>
+                            </div>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+    	)
+    }
+}
+export default WritePrescriptionBody
