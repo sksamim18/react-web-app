@@ -67,8 +67,6 @@ class DoctorMain extends React.Component {
 export default DoctorMain
 
 
-
-
 class Settings extends React.Component {
     constructor(props) {
         super(props)
@@ -91,8 +89,8 @@ class Settings extends React.Component {
                     <div className="col-md-8 center-div">
                         <ul class="list-group">
                             <li class="list-group-item searchResultBox text-left shadow-sm">
-                                Username: GYHJKGN {'\u00A0\u00A0\u00A0\u00A0\u00A0'}
-                                <a href="#" class="btn btn-info btn-sm">Change Username </a>
+                                Full name: Lorsum Epsum {'\u00A0\u00A0\u00A0\u00A0\u00A0'}
+                                <a href="#" class="btn btn-info btn-sm"> Change full name </a>
                             </li>
                             <li class="list-group-item searchResultBox text-left shadow-sm">
                                 Phone Number: 9067545678 {'\u00A0\u00A0\u00A0\u00A0\u00A0'}
@@ -132,7 +130,7 @@ class PatientRecord extends React.Component {
         return (
             <div className="container">
                 <br></br><br></br>
-                <h4>Prescription list</h4>
+                <h4>Patient list</h4>
                 <div className="row">
                     <div className="col-md-8 center-div">
                         <ul class="list-group">

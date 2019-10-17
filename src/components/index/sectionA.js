@@ -8,7 +8,7 @@ class SectionA extends React.Component {
     render () {
         const indexCover = {
             height: "550px",
-            margin: "40px",
+            marginTop: "40px",
 
         }
         const homeSmallCard = {
