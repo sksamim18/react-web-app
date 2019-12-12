@@ -4,25 +4,22 @@ import React from 'react'
 class FindPrescriptionBody extends React.Component {
     
     render () {
-
         const DropDown = {
-        	position: "absolute",
-        	transform: "translate3d(627px, -2px, 0px); top: 0px", 
-        	left: "0px",
-        	willChange: "transform"
+            position: "absolute",
+            transform: "translate3d(627px, -2px, 0px); top: 0px", 
+            left: "0px",
+            willChange: "transform"
         }
-
         const buttonStyle = {
-        	color: "#fff",
+            color: "#fff",
             border: "0px",
             borderRadius: "0px",
         }
 
-
-    	return (
+        return (
             <div className="container">
                 <br></br><br></br>
-            	<div className="row">
+                <div className="row">
                     <div className="col-md-5 center-div text-center">
                         <h4> Find a single prescription or find a patient prescription in bulk</h4>
                         <br></br>
@@ -46,7 +43,7 @@ class FindPrescriptionBody extends React.Component {
                     </div>
                 </div>
             </div>
-    	)
+        )
     }
 }
 export default FindPrescriptionBody

@@ -8,14 +8,14 @@ import DoctorMain from './doctorMain.js'
 
 class DashboardForDoctor extends React.Component {
 
-	render() {
-		return (
+    render() {
+        return (
             <div>
                  <Navbar />
                  <DoctorMain />
                  <Footer />
             </div>
-		)
-	}
+        )
+    }
 }
 export default DashboardForDoctor

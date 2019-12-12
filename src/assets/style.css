@@ -65,6 +65,10 @@ body {
 	border-radius: 10px !important;
 }
 
+.col-md-1 {
+	margin: 5px;
+}
+
 @media only screen and (max-width: 600px) {
     .wide-screen {
         display: none;
